@@ -6,14 +6,29 @@ btn.addEventListener('click', event => {
   const usuario = pegarForm(formulario);
 
   if (usuario.genero === 'homem') {
-    console.log(calcTmbHomem(usuario.peso, usuario.idade, usuario.altura));
+    const calcuTmbHomem = calcTmbHomem(
+      usuario.peso,
+      usuario.idade,
+      usuario.altura
+    );
+    criarResultadoCalculadora(calcuTmbHomem);
   } else {
-    console.log(calcTmbMulher(usuario.peso, usuario.idade, usuario.altura));
+    const calcuTmbMulher = calcTmbMulher(
+      usuario.peso,
+      usuario.idade,
+      usuario.altura
+    );
+    criarResultadoCalculadora(calcuTmbMulher);
   }
 
   formulario.reset();
   event.preventDefault();
 });
+
+function criarResultadoCalculadora(result) {
+  const resultadoText = document.querySelector('.resultado-text');
+  resultadoText.textContent = result;
+}
 
 function pegarForm(form) {
   const usuario = {

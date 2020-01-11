@@ -11,3 +11,12 @@
     text-transform: uppercase;
     margin: 1rem 0 0 2rem;
 }
+
+.resultado-text {
+    font-size: 2rem;
+    color: chocolate;
+}
+
+.calculadoras {
+    grid-column: center-start / center-end;
+}
