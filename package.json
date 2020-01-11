@@ -1,0 +1,12 @@
+{
+  "name": "fitness",
+  "version": "1.0.0",
+  "description": "calculadora fitness",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "author": "Lucas Tavares",
+  "license": "ISC"
+}

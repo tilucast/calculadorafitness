@@ -1,0 +1,13 @@
+.navbar {
+    width: 100%;
+    height: 8rem;
+    background-color: rgb(61, 59, 59);
+    grid-column: full-start / full-end;
+}
+
+.header-nav {
+    color: cornsilk;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 1rem 0 0 2rem;
+}
