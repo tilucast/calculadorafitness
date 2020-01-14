@@ -13,10 +13,87 @@
 }
 
 .resultado-text {
-    font-size: 2rem;
-    color: chocolate;
+    font-size: 2.6rem;
+    color: black;
 }
 
 .calculadoras {
     grid-column: center-start / center-end;
+}
+
+.input-text {
+    height: 2.5rem;
+    width: 20rem;
+    transition: all .3s;
+    border: 1.8px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-text:focus:invalid {
+    border-color: red;
+}
+
+.input-text:focus {
+    border-color: green;
+}
+
+.btn-calc {
+    height: 3rem;
+    width: 12rem;
+    border: 1px solid black;
+    background-color: rgb(199, 194, 194);
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 600;
+    transition: all .2s;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.btn-calc:hover {
+    background-color: rgb(221, 220, 220);
+}
+
+
+.calc-imc {
+    height: 50rem;
+    width: 60rem;
+    background-color: red;
+    display: none;
+}
+
+.output {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+span {
+    font-size: 1.8rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 2rem 0 0 0;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+input[type=radio] {
+    margin-right: 0.6rem;
+}
+
+input[type=radio]:last-of-type {
+    margin-left: 0.8rem;
 }
