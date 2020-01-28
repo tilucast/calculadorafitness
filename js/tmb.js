@@ -1,9 +1,19 @@
 const formulario = document.querySelector('.form-tmb');
+const buttoncalcularTmb = document.querySelector('.btn-calc');
+const resultadoContainer = document.querySelector('.resultado-container');
 
-const btn = document.querySelector('.btn-calc');
+buttoncalcularTmb.addEventListener('click', event => {
+  const usuario = pegarFormTmb(formulario);
 
-btn.addEventListener('click', event => {
-  const usuario = pegarForm(formulario);
+  if (usuario.idade === '') {
+    return;
+  }
+  if (usuario.peso === '') {
+    return;
+  }
+  if (usuario.altura === '') {
+    return;
+  }
 
   if (usuario.genero === 'homem') {
     const calcuTmbHomem = calcTmbHomem(
@@ -11,26 +21,25 @@ btn.addEventListener('click', event => {
       usuario.idade,
       usuario.altura
     );
-    criarResultadoCalculadora(calcuTmbHomem);
-  } else {
+    criarResultadoCalculadora(resultadoContainer, calcuTmbHomem);
+  } else if (usuario.genero === 'mulher') {
     const calcuTmbMulher = calcTmbMulher(
       usuario.peso,
       usuario.idade,
       usuario.altura
     );
-    criarResultadoCalculadora(calcuTmbMulher);
+    criarResultadoCalculadora(resultadoContainer, calcuTmbMulher);
   }
 
   formulario.reset();
   event.preventDefault();
 });
 
-function criarResultadoCalculadora(result) {
-  const resultadoText = document.querySelector('.resultado-text');
-  resultadoText.textContent = result;
+function criarResultadoCalculadora(container, result) {
+  container.textContent = result;
 }
 
-function pegarForm(form) {
+function pegarFormTmb(form) {
   const usuario = {
     genero: form.genero.value,
     peso: form.peso.value,
@@ -45,12 +54,18 @@ function calcTmbHomem(peso, idade, altura) {
   // eslint-disable-next-line prettier/prettier
   const tmb = 66 + (13.7 * peso) + (5 * altura) - (6.8 * idade);
 
-  return tmb;
+  const tmbFixed = tmb.toFixed(2);
+
+  return tmbFixed;
 }
 
 function calcTmbMulher(peso, idade, altura) {
   // eslint-disable-next-line prettier/prettier
   const tmb = 665 + (9.6 * peso) + (1.8 * altura) - (4.7 * idade);
 
-  return tmb;
+  const tmbFixed = tmb.toFixed(2);
+
+  return tmbFixed;
 }
+
+// /////////////////////////////////////////////////////////////////

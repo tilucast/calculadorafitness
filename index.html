@@ -1,64 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=], initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <title>Calculadora Fitness</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=], initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/estilos.css" />
-  <title>Calculadora Fitness</title>
-</head>
+  <body class="container">
+    <nav class="navbar">
+      <h1 class="header-nav">
+        Calculadora Fitness
+      </h1>
 
-<body class="container">
-  <nav class="navbar">
-    <h2 class="header-nav">
-      Calculadora Fitness
-    </h2>
-  </nav>
+      <div class="calculadoras-nav">
+        <h2 class="item-nav-i">Calculadora TMB</h2>
+        <h2 class="item-nav-a">Calculadora IMC</h2>
+      </div>
+    </nav>
 
-  <section class="calculadoras">
-    <div class="calc-tmb">
-      <h1>Calcule seu Metabolismo Basal</h1>
+    <section class="calculadoras">
+      <div class="calc-tmb">
+        <h1>Calcule seu Metabolismo Basal</h1>
 
-      <form class="form-tmb">
-        <p>Digite seu Peso</p>
-        <input class="input-text" type="text" id="peso" required />
+        <form class="form-tmb">
+          <label for="peso">Digite seu peso</label>
+          <input
+            class="input-text"
+            name="peso"
+            type="text"
+            id="peso"
+            placeholder="Em kilos"
+            required
+          />
 
-        <p>Digite sua Altura ( em centímetros )</p>
-        <input class="input-text" type="text" id="altura" required />
+          <label for="altura">Digite sua altura </label>
+          <input
+            class="input-text"
+            name="altura"
+            type="text"
+            id="altura"
+            placeholder="Em centímetros"
+            required
+          />
 
-        <p>Digite sua Idade</p>
-        <input class="input-text" type="text" id="idade" required />
+          <label for="idade">Digite sua idade</label>
+          <input
+            class="input-text"
+            name="idade"
+            type="text"
+            id="idade"
+            required
+          />
 
-        <h4>Selecione seu Sexo</h4>
-        <div class="form-radio">
-          <input type="radio" name="genero" id="genero" value="homem" />
-          <span>Homem</span>
+          <h4>Selecione seu Sexo</h4>
 
-          <input type="radio" name="genero" id="genero" value="mulher" />
-          <span>Mulher</span>
-        </div>
+          <div class="flex">
+            <label for="homem">Homem</label>
+            <input
+              type="radio"
+              name="genero"
+              id="homem"
+              value="homem"
+              required
+              checked
+            />
 
-        <button id="calcular" class="btn-calc">Calcular</button>
-      </form>
-    </div>
+            <label for="mulher">Mulher</label>
+            <input
+              type="radio"
+              name="genero"
+              id="mulher"
+              value="mulher"
+              required
+            />
+          </div>
 
-    <div class="calc-imc">
+          <button type="submit" id="calcular" class="btn-calc">Calcular</button>
+        </form>
+      </div>
 
-    </div>
+      <div class="calc-imc">
+        <h1>Calcule seu Ìndice de Massa Corporal ( imc )</h1>
 
-    <div class="resultado">
-      <h2 class="resultado-text"></h2>
-    </div>
+        <form class="form-imc">
+          <label for="peso">Digite seu peso</label>
+          <input
+            class="input-text"
+            name="peso"
+            type="text"
+            id="peso"
+            placeholder="Em kilos"
+            required
+          />
 
-    <button class="penis">Clique em mim</button>
+          <label for="altura">Digite sua altura</label>
+          <input
+            class="input-text"
+            type="text"
+            name="altura"
+            id="altura"
+            placeholder="Em metros"
+            required
+          />
 
+          <button type="submit" id="calcular" class="btn-calc-imc">
+            Calcular
+          </button>
+        </form>
+      </div>
 
-  </section>
+      <div class="resultado">
+        <span class="resultado-container"></span>
+        <span class="resultado-container-imc"></span>
+        <strong class="hover"></strong>
+      </div>
+    </section>
 
-  <script src="js/main.js"></script>
-  <script src="js/switch.js"></script>
-</body>
+    <footer class="footer">
+      <div class="copyright">
+        <strong>Lucas Tavares</strong>
+      </div>
 
+      <aside>
+        <a href="https://github.com/tilucast" target="_">
+          <svg class="icon">
+            <use href="img/symbol-defs.svg#icon-github"></use>
+          </svg>
+        </a>
+
+        <!-- prettier-ignore -->
+        <a href="https://www.linkedin.com/in/lucas-tavares-freire-matos-6bb768157/" target="_">
+          <svg class="icon">
+            <use href="img/symbol-defs.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+      </aside>
+    </footer>
+
+    <script src="js/tmb.js"></script>
+    <script src="js/imc.js"></script>
+    <script src="js/switch.js"></script>
+  </body>
 </html>

@@ -1,99 +1,229 @@
 .navbar {
-    width: 100%;
-    height: 8rem;
-    background-color: rgb(61, 59, 59);
-    grid-column: full-start / full-end;
-}
+  width: 100%;
+  height: 8vh;
+  background-color: rgb(61, 59, 59);
+  border-bottom: 2px solid rgb(150, 61, 61);
+  z-index: 50;
 
-.header-nav {
-    color: cornsilk;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin: 1rem 0 0 2rem;
-}
+  display: flex;
+  align-items: center;
 
-.resultado-text {
-    font-size: 2.6rem;
-    color: black;
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
 }
 
 .calculadoras {
-    grid-column: center-start / center-end;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  grid-row: 2/ 3;
+
+
+}
+
+.calculadoras-nav {
+  display: flex;
+  flex-direction: row;
+
+  margin-left: 3rem;
+  position: relative;
+  bottom: -20px;
+}
+
+.item-nav-i {
+  margin-right: 1.3rem;
+  font-size: 2rem;
+  background-color: rgb(222, 222, 224);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: blanchedalmond;
+}
+
+.item-nav-a {
+  margin-right: 1.3rem;
+  font-size: 2rem;
+  background-color: rgb(222, 222, 224);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.header-nav {
+  color: cornsilk;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.resultado-text {
+  font-size: 2.6rem;
+  color: black;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.calculadoras {
+  grid-column: center-start / center-end;
 }
 
 .input-text {
-    height: 2.5rem;
-    width: 20rem;
-    transition: all .3s;
-    border: 1.8px solid black;
-    border-radius: 5px;
-    outline: none;
+  height: 2.5rem;
+  width: 20rem;
+  transition: all 0.3s;
+  border: 1.8px solid black;
+  border-radius: 5px;
+  outline: none;
 }
 
 .input-text:focus:invalid {
-    border-color: red;
+  border-color: red;
 }
 
 .input-text:focus {
-    border-color: green;
+  border-color: green;
 }
 
 .btn-calc {
-    height: 3rem;
-    width: 12rem;
-    border: 1px solid black;
-    background-color: rgb(199, 194, 194);
-    font-size: 1.3rem;
-    color: black;
-    font-weight: 600;
-    transition: all .2s;
-    text-transform: uppercase;
-    border-radius: 5px;
+  height: 3rem;
+  width: 12rem;
+  border: 1px solid black;
+  background-color: rgb(199, 194, 194);
+  font-size: 1.3rem;
+  color: black;
+  font-weight: 600;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin: 1rem 0 1rem 0;
+  display: block;
+  cursor: pointer;
 }
 
 .btn-calc:hover {
-    background-color: rgb(221, 220, 220);
+  background-color: rgb(221, 220, 220);
 }
 
+.btn-calc-imc {
+  height: 3rem;
+  width: 12rem;
+  border: 1px solid black;
+  background-color: rgb(199, 194, 194);
+  font-size: 1.3rem;
+  color: black;
+  font-weight: 600;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin: 1rem 0 1rem 0;
+  display: block;
+  cursor: pointer;
+}
+
+.btn-calc-imc:hover {
+  background-color: rgb(221, 220, 220);
+}
+
+.resultado-container-imc {
+  cursor: pointer;
+}
+
+.container-animation {
+  animation: imc 1s infinite;
+}
 
 .calc-imc {
-    height: 50rem;
-    width: 60rem;
-    background-color: red;
-    display: none;
+  display: none;
+}
+
+.calc-tmb {
+  z-index: 50;
 }
 
 .output {
-    display: block;
+  display: block;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-p {
-    font-size: 1.6rem;
+.hover {
+  font-size: 1.6rem;
 }
+
+.footer {
+
+  grid-column: full-start / full-end;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.5rem;
+  background-color: rgb(61, 59, 59);
+  height: 7vh;
+}
+
+.footer strong {
+  color: blanchedalmond;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+.icon {
+  height: 4.5rem;
+  width: 5rem;
+  fill: rgb(222, 222, 224);
+}
+
+.icon:hover {
+  fill: blanchedalmond;
+}
+
+
 
 span {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 h1 {
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin: 2rem 0 0 0;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 h4 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
-input[type=radio] {
-    margin-right: 0.6rem;
+input[type="radio"] {
+  margin-right: 0.6rem;
 }
 
-input[type=radio]:last-of-type {
-    margin-left: 0.8rem;
+input[type="radio"] {
+  margin-left: 0.8rem;
+}
+
+label {
+  font-size: 1.6rem;
+  display: block;
+}
+
+@keyframes imc {
+  0% {
+    color: black;
+  }
+
+  50% {
+    color: red;
+  }
+
+  100% {
+    color: black;
+  }
 }
